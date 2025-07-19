@@ -1,0 +1,12 @@
+使用Node.js版本管理器nvm(Windows专用)
+
+
+打开这个网址：https://github.com/coreybutler/nvm-windows/releases
+
+找到最新的 .exe 安装包（例如 nvm-setup.exe），下载并安装
+
+安装时会提示设置默认 Node 目录，接受默认即可
+
+nvm use切换
+nvm -v 查看是否成功
+nvm list 可查看

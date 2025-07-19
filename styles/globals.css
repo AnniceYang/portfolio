@@ -1,3 +1,5 @@
+/* 全局样式（导入Tailwind指令） */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

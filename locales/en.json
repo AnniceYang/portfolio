@@ -1,0 +1,12 @@
+{
+  "welcome": "Welcome to Annice's Portfolio!",
+  "loading": "Loading home page...",
+  "home_title": "Welcome to My Personal Portfolio!",
+  "home_description": "Here you'll find projects and skills built with React + Next.js + Tailwind CSS.",
+  "nav": {
+    "home": "Home",
+    "about": "About Me",
+    "projects": "Projects",
+    "contact": "Contact"
+  }
+}
