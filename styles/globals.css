@@ -3,6 +3,16 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ------- 颜色变量（方便统一管理） ------- */
+:root {
+  --color-bg-dark: #0f0c29; /* 开场动画深色背景 */
+  --color-bg-gradient-from: #12002f;
+  --color-bg-gradient-via: #7f5af0;
+  --color-bg-gradient-to: #ff8fab;
+  --color-mouse-glow: rgba(127, 90, 240, 0.3); /* 鼠标光圈主色 */
+  --color-text-glow: #7f5af0; /* 打字机光影色 */
+}
+
 /* ------- 自定义动画（可用于渐现、缩放等） ------- */
 @keyframes scaleIn {
   from {
@@ -19,7 +29,7 @@
   animation: scaleIn 1.2s ease-out forwards;
 }
 
-/* ------- 鼠标跟随光圈样式 ------- */
+/* 鼠标跟随光圈 */
 .mouse-glow {
   position: fixed;
   width: 400px;
@@ -28,24 +38,55 @@
   border-radius: 50%;
   background: radial-gradient(
     circle,
-    rgba(127, 90, 240, 0.3) 0%,
+    var(--color-mouse-glow) 0%,
     transparent 70%
   );
   filter: blur(120px);
   z-index: 40;
   transform: translate(-50%, -50%);
-  transition: transform 0.1s ease-out;
+  will-change: transform;
+  /* 微小脉动动画 */
+  animation: pulseGlow 2.5s infinite ease-in-out;
 }
 
-/* ------- 发光文字效果（打字机slogan使用） ------- */
+@keyframes pulseGlow {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.4;
+    transform: translate(-50%, -50%) scale(1.05);
+  }
+}
+
+/* 打字机SLOGAN发光文字效果 */
 .glow-text {
-  text-shadow: 0 0 4px #fff, 0 0 10px #7f5af0, 0 0 20px #7f5af0;
+  text-shadow: 0 0 4px #fff, 0 0 10px var(--color-text-glow),
+    0 0 20px var(--color-text-glow);
 }
 
-/* ------- 全局字体与背景风格建议（可选） ------- */
+/* ------- 全局字体与背景风格建议 ------- */
 body {
   font-family: "Inter", sans-serif;
-  background-color: #0f0c29; /* 深色星空底色，可根据页面改 */
-  color: #ffffff; /* 默认文字白色，更适合暗背景 */
+  background: linear-gradient(to right, #f8e1f4, #e8ddff); /* 主页渐变背景 */
+  color: #333;
   scroll-behavior: smooth;
+}
+
+/* 主页容器背景例子（在主页根div里用class） */
+.page-home-bg {
+  background: linear-gradient(to right, #f8e1f4, #e8ddff);
+  color: #333;
+}
+
+/* 主页辅助文字色 */
+.text-secondary {
+  color: #7a7a7a;
+}
+
+.page-light-bg {
+  background: linear-gradient(to right, #f8e1f4, #e8ddff);
+  color: #333;
 }
