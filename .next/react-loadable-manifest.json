@@ -1,1 +1,8 @@
-{}
+{
+  "pages\\index.js -> @/components/OpeningAnimation": {
+    "id": "pages\\index.js -> @/components/OpeningAnimation",
+    "files": [
+      "static/chunks/components_OpeningAnimation_js.js"
+    ]
+  }
+}

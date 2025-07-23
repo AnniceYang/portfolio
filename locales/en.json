@@ -8,5 +8,12 @@
     "about": "About Me",
     "projects": "Projects",
     "contact": "Contact"
+  },
+  "projects": {
+    "pageTitle": "My Projects",
+    "portfolio": {
+      "title": "Personal Portfolio Website",
+      "description": "A responsive, multilingual portfolio site built with Next.js and Tailwind CSS."
+    }
   }
 }

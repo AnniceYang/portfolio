@@ -17,7 +17,7 @@ exports.modules = {
   \*************************/
 /***/ ((module) => {
 
-module.exports = /*#__PURE__*/JSON.parse('{"welcome":"Welcome to Annice\'s Portfolio!","loading":"Loading home page...","home_title":"Welcome to My Personal Portfolio!","home_description":"Here you\'ll find projects and skills built with React + Next.js + Tailwind CSS.","nav":{"home":"Home","about":"About Me","projects":"Projects","contact":"Contact"}}');
+module.exports = /*#__PURE__*/JSON.parse('{"welcome":"Welcome to Annice\'s Portfolio!","loading":"Loading home page...","home_title":"Welcome to My Personal Portfolio!","home_description":"Here you\'ll find projects and skills built with React + Next.js + Tailwind CSS.","nav":{"home":"Home","about":"About Me","projects":"Projects","contact":"Contact"},"projects":{"pageTitle":"My Projects","portfolio":{"title":"Personal Portfolio Website","description":"A responsive, multilingual portfolio site built with Next.js and Tailwind CSS."}}}');
 
 /***/ })
 

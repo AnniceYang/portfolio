@@ -1,28 +1,44 @@
-//欢迎页（开场动画页)
-import { useEffect } from "react";
-import { useRouter } from "next/router";
-import { useTranslations } from "next-intl";
+//欢迎页（开场动画页)+Home主页
+// pages/index.js
 
-export default function Landing() {
-  const router = useRouter();
+import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
+import dynamic from "next/dynamic";
+
+// 动态导入动画组件（防止 SSR 报错）
+const OpeningAnimation = dynamic(
+  () => import("@/components/OpeningAnimation"),
+  { ssr: false }
+);
+
+export default function HomePage() {
   const t = useTranslations();
+  const [showAnimation, setShowAnimation] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      router.push("/home");
-    }, 3000); //3s后跳转主页
+    const hasVisited = sessionStorage.getItem("hasVisited");
+    if (hasVisited) {
+      // 已经访问过本次会话，跳过动画
+      setShowAnimation(false);
+    }
+  }, []);
 
-    return () => clearTimeout(timer);
-  }, [router]);
+  const handleAnimationComplete = () => {
+    sessionStorage.setItem("hasVisited", "true");
+    setShowAnimation(false);
+  };
 
+  if (showAnimation) {
+    return <OpeningAnimation onComplete={handleAnimationComplete} />;
+  }
+
+  // 动画结束后显示主页内容
   return (
-    <div className="min-h-screen bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center">
-      <div className="text-center">
-        <h1 className="text-5xl font-extrabold text-white animate-bounce">
-          👋 {t("welcome")}
-        </h1>
-        <p className="mt-4 text-white text-lg animate-pulse">{t("loading")}</p>
-      </div>
+    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-4">
+      <h1 className="text-4xl font-extrabold mb-4">{t("home_title")}</h1>
+      <p className="text-lg text-gray-600 max-w-xl text-center">
+        {t("home_description")}
+      </p>
     </div>
   );
 }
@@ -30,7 +46,7 @@ export default function Landing() {
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      messages: (await import(`../locales/${locale}.json`)).default,
+      messages: (await import(`@/locales/${locale}.json`)).default,
     },
   };
 }
