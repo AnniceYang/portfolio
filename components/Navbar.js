@@ -22,6 +22,13 @@ export default function Navbar() {
 
   // 监听页面滚动，切换导航阴影效果
   useEffect(() => {
+    // 👇 主动预加载所有导航页面
+    router.prefetch("/");
+    router.prefetch("/about");
+    router.prefetch("/projects");
+    router.prefetch("/contact");
+
+    // 👇 页面滚动监听
     const handleScroll = () => {
       setScrolled(window.scrollY > 10);
     };

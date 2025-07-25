@@ -102,3 +102,8 @@ body {
 .rotate-y-180 {
   transform: rotateY(180deg);
 }
+
+a,
+button {
+  transition: all 0.3s ease-in-out;
+}

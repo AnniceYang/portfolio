@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{\"pages\\\\index.js -> @/components/OpeningAnimation\":{\"id\":\"pages\\\\index.js -> @/components/OpeningAnimation\",\"files\":[\"static/chunks/components_OpeningAnimation_js.js\"]}}"
+self.__REACT_LOADABLE_MANIFEST="{\"pages\\\\_app.js -> @/components/OpeningAnimation\":{\"id\":\"pages\\\\_app.js -> @/components/OpeningAnimation\",\"files\":[\"static/chunks/components_OpeningAnimation_js.js\"]}}"
