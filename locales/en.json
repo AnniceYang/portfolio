@@ -57,5 +57,55 @@
       "title": "Contact Me",
       "content": "Interested in collaborating or chatting? Feel free to reach out via the bottom of the page or LinkedIn!"
     }
+  },
+  "contactPage": {
+    "title": "Get in Touch",
+    "description": "Have a project in mind? Let's create something amazing together.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "captcha_label": "Anti-bot check",
+      "captcha_placeholder": "Enter the sum",
+      "name_required": "Please enter your name.",
+      "email_required": "Please enter a valid email.",
+      "message_required": "Please enter your message.",
+      "captcha_failed": "Captcha answer is incorrect.",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Your message has been sent successfully!",
+      "error": "Something went wrong. Please try again later."
+    }
+  },
+
+  "homePage": {
+    "title": "Home",
+    "hero_title": "Hi, I'm Annice.\nTurning Ideas Into Interfaces.",
+    "hero_subtitle": "Frontend developer specialized in building modern, user-focused web apps with React, Next.js and Tailwind CSS.",
+    "buttons": {
+      "view_work": "View My Work",
+      "about_me": "About Me"
+    },
+    "recent_projects": "Recent Projects",
+    "view_more": "View More",
+    "recent": [
+      {
+        "title": "Portfolio Website",
+        "description": "A multilingual responsive portfolio built with Next.js"
+      },
+      {
+        "title": "EnergyVista Dashboard",
+        "description": "Real-time energy flow visualization with MQTT"
+      },
+      {
+        "title": "Cashierly POS",
+        "description": "POS system with clean UI and multi-role support"
+      }
+    ],
+    "cta": {
+      "title": "Ready to start a project?",
+      "subtitle": "Let's collaborate and build something great together.",
+      "button": "Contact Me"
+    }
   }
 }

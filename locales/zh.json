@@ -59,5 +59,54 @@
       "title": "联系我",
       "content": "感兴趣合作或进一步交流？欢迎通过页面底部或 LinkedIn 与我取得联系！"
     }
+  },
+  "contactPage": {
+    "title": "联系我",
+    "description": "有项目想法吗？让我们一起创造一些有趣的东西吧。",
+    "form": {
+      "name": "姓名",
+      "email": "邮箱",
+      "message": "留言",
+      "captcha_label": "防机器人验证",
+      "captcha_placeholder": "请输入上方加法结果",
+      "name_required": "请输入姓名。",
+      "email_required": "请输入有效的邮箱地址。",
+      "message_required": "请输入留言内容。",
+      "captcha_failed": "验证码答案错误。",
+      "submit": "发送消息",
+      "sending": "发送中...",
+      "success": "您的留言已成功发送！",
+      "error": "发送失败，请稍后重试。"
+    }
+  },
+  "homePage": {
+    "title": "首页",
+    "hero_title": "你好，我是 Annice。\n把想法变成界面。",
+    "hero_subtitle": "前端开发工程师，专注于用 React、Next.js 和 Tailwind CSS 构建现代化、以用户为中心的 Web 应用。",
+    "buttons": {
+      "view_work": "查看作品",
+      "about_me": "关于我"
+    },
+    "recent_projects": "最新项目",
+    "view_more": "查看更多",
+    "recent": [
+      {
+        "title": "个人作品集网站",
+        "description": "使用 Next.js 开发的多语言响应式作品集网站"
+      },
+      {
+        "title": "EnergyVista 能源可视化平台",
+        "description": "支持 MQTT 的实时能流可视化仪表盘"
+      },
+      {
+        "title": "Cashierly POS 收银系统",
+        "description": "界面简洁、多角色支持的现代收银平台"
+      }
+    ],
+    "cta": {
+      "title": "准备开始合作了吗？",
+      "subtitle": "让我们一起打造出色的作品。",
+      "button": "联系我"
+    }
   }
 }
