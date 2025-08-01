@@ -34,9 +34,27 @@ export default function Footer() {
   return (
     <footer className="bg-white py-8 px-4 mt-16 relative   shadow-inner  border-white/20">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center text-pink-700 text-sm space-y-6 md:space-y-0">
-        {/*左侧 版权*/}
-        <div className="mb-4 md:mb-0 select-none">
-          © {new Date().getFullYear()} Annice Yang. All rights reserved.
+        {/* 左侧版权 + 联系方式 */}
+        <div className="mb-4 md:mb-0 select-none text-center md:text-left">
+          <div>
+            © {new Date().getFullYear()} Annice Yang. All rights reserved.
+          </div>
+          <div className="mt-1 text-xs text-pink-600">
+            Email:{" "}
+            <a
+              href="mailto:shelleytt06@gmail.com"
+              className="underline hover:text-pink-900"
+            >
+              shelleytt06@gmail.com
+            </a>{" "}
+            | Tel:{" "}
+            <a
+              href="tel:+8618899762987"
+              className="underline hover:text-pink-900"
+            >
+              +86 18899762987
+            </a>
+          </div>
         </div>
 
         {/*中间 导航*/}
@@ -64,7 +82,7 @@ export default function Footer() {
             <FaGithub size={20} />
           </a>
           <a
-            href="https://linkedin.com/in/your-linkedin" // 换成你的LinkedIn链接
+            href="https://www.linkedin.com/in/anniceyang/"
             target="_blank"
             rel="noopener noreferrer"
             className="group hover:text-pink-700 hover:scale-110 transform transition-all duration-300"

@@ -31,12 +31,15 @@
   "about": {
     "hero": {
       "name": "Annice Yang",
-      "subtitle": "Frontend Developer | Passionate about Creation & Design",
-      "tags": "React,Next.js,Tailwind CSS"
+      "subtitle": "Frontend Developer / UI Enthusiast",
+      "summary_title": "Profile Snapshot",
+      "summary": "Passionate Frontend Developer with strong experience in React, Next.js and modern UI/UX practices. Skilled at building sleek, responsive, and performant web interfaces with a global perspective.",
+      "tags": "React,Next.js,Tailwind CSS,UI/UX"
     },
+
     "skills": {
       "title": "Skills",
-      "list": "HTML5,CSS3,JavaScript,Vue2,React,Tailwind,Next.js,REST API,MQTT"
+      "list": "HTML5,CSS3,JavaScript,Vue2,React,Tailwind CSS,Next.js,REST API,MQTT"
     },
     "experience": {
       "title": "Experience",

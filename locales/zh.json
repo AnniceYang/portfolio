@@ -33,12 +33,15 @@
   "about": {
     "hero": {
       "name": "Annice Yang",
-      "subtitle": "前端开发者 | 热爱创造与设计",
-      "tags": "React,Next.js,Tailwind CSS"
+      "subtitle": "前端开发工程师 / 界面设计爱好者",
+      "summary_title": "个人简介",
+      "summary": "热爱前端开发，熟练 React / Next.js / Tailwind，专注于现代化、国际化的 Web 界面设计与实现。",
+      "tags": "React,Next.js,Tailwind CSS,UI/UX"
     },
+
     "skills": {
       "title": "技能栈",
-      "list": "HTML5,CSS3,JavaScript,Vue2,React,Tailwind,Next.js,REST API,MQTT"
+      "list": "HTML5,CSS3,JavaScript,Vue2,React,Tailwind CSS,Next.js,REST API,MQTT"
     },
     "experience": {
       "title": "工作经历",

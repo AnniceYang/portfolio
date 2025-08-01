@@ -107,3 +107,14 @@ a,
 button {
   transition: all 0.3s ease-in-out;
 }
+.border-gradient-pink {
+  border-image: linear-gradient(to bottom, #ec4899, #a78bfa) 1;
+}
+/* 兼容主流浏览器隐藏滚动条 */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE和Edge */
+  scrollbar-width: none; /* Firefox */
+}
