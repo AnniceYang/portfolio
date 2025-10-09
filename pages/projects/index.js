@@ -13,14 +13,20 @@ export default function Projects() {
       tech: ["React", "Next.js", "Tailwind", "i18n"],
       github: "https://github.com/AnniceYang/porfolio.git",
       live: "https://your-portfolio.vercel.app",
+      images: ["/images/portfolio1.png", "/images/portfolio2.png"],
     },
     {
       id: "cashier-pos",
       title: t("cashier-pos.title"),
       description: t("cashier-pos.description"),
-      tech: ["Vue 2", "Element UI", "REST API", "i18n"],
-      github: "https://github.com/AnniceYang/cashierly-pos",
+      tech: ["Vite", "Vue 3", "Element PLUS", "Pinia", "REST API", "i18n"],
+      github: "https://github.com/AnniceYang/cashierly-pos.git",
       live: "https://demo-cashierly.vercel.app", // 可用来部署个 mock demo
+      images: [
+        "/images/cashierly1.png",
+        "/images/cashierly2.png",
+        "/images/cashierly3.png",
+      ],
     },
     {
       id: "energyvista",
@@ -83,6 +89,13 @@ export default function Projects() {
                 Live
               </Link>
             </div>
+
+            <Link
+              href={`/projects/${project.id}`}
+              className="text-pink-600 font-semibold hover:underline"
+            >
+              Details →
+            </Link>
           </div>
         ))}
       </div>

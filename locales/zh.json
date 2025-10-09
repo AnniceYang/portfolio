@@ -30,6 +30,37 @@
     }
   },
 
+  "projectDetails": {
+    "back": "返回项目列表",
+    "highlightsTitle": "项目亮点",
+    "reflectionTitle": "个人思考",
+
+    "cashier-pos": {
+      "title": "Cashierly POS 系统",
+      "description": "一个为中小型商铺设计的轻量级收银管理系统，支持多语言、夜间模式、Excel 导出及客户、产品、订单的完整管理。",
+      "highlights": [
+        "多语言界面（中英文）基于 i18n 实现",
+        "夜间 / 日间模式并持久保存用户偏好",
+        "Pinia 状态管理与组件模块化设计",
+        "数据导出 Excel 功能（xlsx 库）",
+        "简洁的仪表盘布局，适配桌面与平板"
+      ],
+      "reflection": "这个项目让我更深入理解了 Vue 组件复用和状态管理的架构设计，也提升了我对用户体验细节的把控能力。"
+    },
+
+    "projects": {
+      "title": "个人作品集网站",
+      "description": "使用 Next.js 与 Tailwind CSS 构建的个人作品集网站，用于展示项目与技能，支持多语言访问。",
+      "highlights": [
+        "完全响应式设计，基于 Tailwind CSS",
+        "多语言支持（中 / 英）使用 next-intl 实现",
+        "使用 Framer Motion 实现平滑过渡动画",
+        "部署于 Vercel 并优化了 SEO 配置"
+      ],
+      "reflection": "这个项目让我学会了如何在设计中保持一致性，并理解了针对海外访客的内容结构优化思路。"
+    }
+  },
+
   "about": {
     "hero": {
       "name": "Annice Yang",
