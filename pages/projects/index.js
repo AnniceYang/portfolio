@@ -135,22 +135,23 @@ export default function Projects() {
                   </div>
 
                   <div className="flex justify-start space-x-4 text-sm mb-2">
-                    <Link
+                    <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-blue-500 hover:underline font-medium"
                     >
                       GitHub
-                    </Link>
-                    <Link
+                    </a>
+                    <a
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-blue-500 hover:underline font-medium"
+                      className="inline-flex items-center gap-1 text-blue-500 hover:text-blue-700 hover:underline transition"
                     >
-                      Live
-                    </Link>
+                      <Globe size={16} />
+                      <span>Live Demo</span>
+                    </a>
                   </div>
 
                   <Link

@@ -149,22 +149,22 @@ export default function ProjectDetail() {
         </section>
 
         <div className="flex flex-col sm:flex-row gap-4 text-sm mt-10">
-          <Link
+          <a
             href={project.github}
             target="_blank"
             rel="noopener noreferrer"
             className="text-center sm:text-left bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-2 px-4 rounded-lg transition"
           >
             GitHub →
-          </Link>
-          <Link
+          </a>
+          <a
             href={project.live}
             target="_blank"
             rel="noopener noreferrer"
             className="text-center sm:text-left bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-4 rounded-lg transition"
           >
             Live Demo →
-          </Link>
+          </a>
         </div>
 
         <div className="mt-16 text-center">
@@ -172,7 +172,7 @@ export default function ProjectDetail() {
             href="/projects"
             className="text-pink-600 hover:underline font-medium"
           >
-            ← {t("backToProjects")}
+            ← {t("back")}
           </Link>
         </div>
       </div>
