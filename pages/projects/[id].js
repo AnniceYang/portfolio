@@ -2,7 +2,7 @@
 // ✅ 动态路由页面（点进去看项目详情）
 
 import { useRouter } from "next/router";
-import Image from "next/image";
+
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { Globe } from "lucide-react";
@@ -81,18 +81,17 @@ export default function ProjectDetail() {
         ))}
       </div>
 
-      {/* 项目截图 */}
+      {/* 项目截图 - 用 <img> 保证静态站显示 */}
       <div className="grid gap-6 mb-10">
         {project.images.map((img, i) => (
           <div
             key={i}
-            className="relative w-full h-56 sm:h-72 md:h-96 rounded-2xl overflow-hidden shadow-md hover:scale-[1.02] transition-transform"
+            className="w-full h-56 sm:h-72 md:h-96 rounded-2xl overflow-hidden shadow-md hover:scale-[1.02] transition-transform relative"
           >
-            <Image
-              src={img}
+            <img
+              src={img} // ✅ 绝对路径
               alt={`${project.id} screenshot ${i + 1}`}
-              fill
-              className="object-cover"
+              className="object-cover w-full h-full rounded-2xl"
             />
           </div>
         ))}
