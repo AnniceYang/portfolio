@@ -15,7 +15,7 @@ export default function Projects() {
       title: t("portfolio.title"),
       description: t("portfolio.description"),
       tech: ["React", "Next.js", "Tailwind", "i18n"],
-      github: "https://github.com/AnniceYang/porfolio.git",
+      github: "https://github.com/AnniceYang/portfolio",
       live: "https://annice-portfolio.vercel.app/",
       images: ["/images/portfolio1.png", "/images/portfolio2.png"],
     },
@@ -24,7 +24,7 @@ export default function Projects() {
       title: t("cashier-pos.title"),
       description: t("cashier-pos.description"),
       tech: ["Vite", "Vue 3", "Element PLUS", "Pinia", "REST API", "i18n"],
-      github: "https://github.com/AnniceYang/cashierly-pos.git",
+      github: "https://github.com/AnniceYang/cashierly-pos",
       live: "https://cashierly-pos.vercel.app/login",
       images: [
         "/images/cashierly1.png",

@@ -15,14 +15,14 @@ const projectsData = {
       "/images/cashierly3.png",
     ],
     tech: ["Vue 3", "Vite", "Element Plus", "Pinia", "REST API", "i18n"],
-    github: "https://github.com/AnniceYang/cashierly-pos.git",
+    github: "https://github.com/AnniceYang/cashierly-pos",
     live: "https://cashierly-pos.vercel.app/login",
   },
   projects: {
     id: "projects",
     images: ["/images/portfolio1.png", "/images/portfolio2.png"],
     tech: ["Next.js", "React", "Tailwind CSS", "Framer Motion", "i18n"],
-    github: "https://github.com/AnniceYang/porfolio.git",
+    github: "https://github.com/AnniceYang/portfolio",
     live: "https://annice-portfolio.vercel.app/",
   },
 };
