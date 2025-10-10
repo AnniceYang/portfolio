@@ -12,7 +12,7 @@ export default function Projects() {
       description: t("portfolio.description"),
       tech: ["React", "Next.js", "Tailwind", "i18n"],
       github: "https://github.com/AnniceYang/porfolio.git",
-      live: "https://your-portfolio.vercel.app",
+      live: "https://annice-portfolio.vercel.app/",
       images: ["/images/portfolio1.png", "/images/portfolio2.png"],
     },
     {
@@ -21,7 +21,7 @@ export default function Projects() {
       description: t("cashier-pos.description"),
       tech: ["Vite", "Vue 3", "Element PLUS", "Pinia", "REST API", "i18n"],
       github: "https://github.com/AnniceYang/cashierly-pos.git",
-      live: "https://demo-cashierly.vercel.app", // 可用来部署个 mock demo
+      live: "https://cashierly-pos.vercel.app/login", // 可用来部署个 mock demo
       images: [
         "/images/cashierly1.png",
         "/images/cashierly2.png",
