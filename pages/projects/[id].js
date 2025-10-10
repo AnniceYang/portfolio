@@ -4,6 +4,7 @@ import Link from "next/link";
 import Head from "next/head";
 import { useTranslations, useLocale } from "next-intl";
 import { useState, useEffect } from "react";
+import { Globe } from "lucide-react";
 
 const projectsData = {
   "cashier-pos": {

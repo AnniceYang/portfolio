@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 import Head from "next/head";
 import { useEffect, useState } from "react";
+import { Globe } from "lucide-react";
 
 export default function Projects() {
   const t = useTranslations("projects");
