@@ -22,11 +22,11 @@
     },
     "energyvista": {
       "title": "EnergyVista 储能管理平台",
-      "description": "一个实时储能设备管理面板，集成数据可视化、设备控制和 MQTT 通讯。"
+      "description": "一个实时能源监控仪表盘，通过 MQTT 接入 IoT 设备，实现设备状态与用电数据的可视化展示。"
     },
     "travelogue": {
-      "title": "Travelogue 旅游博客",
-      "description": "一个响应式旅游博客平台，支持 Markdown 撰写、特色图文布局和多语言切换。"
+      "title": "Travelogue 技术博客",
+      "description": "一个基于 Next.js 与 MDX 构建的个人博客平台，用于记录与分享技术思考与开发经验，目前处于规划阶段。"
     }
   },
 
@@ -64,34 +64,55 @@
   "about": {
     "hero": {
       "name": "Annice Yang",
-      "subtitle": "前端开发工程师 / 界面设计爱好者",
+      "subtitle": "前端开发工程师 | 能源 & 物联网系统 | 中英双语",
       "summary_title": "个人简介",
-      "summary": "热爱前端开发，熟练 React / Next.js / Tailwind，专注于现代化、国际化的 Web 界面设计与实现。",
-      "tags": "React,Next.js,Tailwind CSS,UI/UX"
+      "summary": "3+ 年前端开发经验，专注能源与物联网系统方向。长期参与基于 Vue2 的设备管理平台开发与维护，具备复杂业务系统实战经验；同时参与部分模块的 Vue3 + TypeScript 升级实践。熟悉设备监控、MQTT 集成与数据可视化开发。具备海外项目对接经验（英语工作语言），能够独立完成跨国技术沟通与文档输出。",
+      "tags": "Vue3,React,Next.js,TypeScript,IoT,MQTT,WebSocket,Data Visualization"
     },
 
     "skills": {
-      "title": "技能栈",
-      "list": "HTML5,CSS3,JavaScript,Vue2,React,Tailwind CSS,Next.js,REST API,MQTT"
+      "title": "技术栈",
+      "list": "JavaScript,TypeScript,Vue3,React,Next.js,Tailwind CSS,REST API,WebSocket,MQTT,ECharts,Git"
     },
+
+    "career": {
+      "title": "职业路径",
+      "p1": "我的职业经历从海外产品与客户沟通开始，在真实商业环境中积累了对用户需求与产品价值的理解。这段经历让我逐渐意识到，技术能够更高效地解决问题，因此开始专注于 Web 前端开发。",
+      "p2": "随后进入能源与物联网行业，从事储能设备管理平台开发，主要参与 Vue2 系统的功能迭代、设备监控界面开发以及数据可视化实现，并参与部分 Vue3 + TypeScript 模块升级。在这个过程中逐渐形成了对 IoT 系统架构与实时数据展示的理解。"
+    },
+
+    "focus": {
+      "title": "当前技术方向",
+      "item1_title": "React / Next.js",
+      "item1_desc": "持续构建个人项目与组件，探索现代前端架构与 SSR 应用开发。",
+      "item2_title": "IoT 实时数据可视化",
+      "item2_desc": "结合 MQTT、WebSocket 与 ECharts，构建实时设备监控与数据可视化界面。",
+      "item3_title": "前端工程化",
+      "item3_desc": "优化项目结构与开发流程，包括组件复用、代码拆分与性能优化。"
+    },
+
     "experience": {
       "title": "工作经历",
-      "items_0_company": "能源科技有限公司",
-      "items_0_position": "前端开发工程师",
-      "items_0_duration": "2023 - 至今",
-      "items_0_description": "开发能源管理平台前端，包括能流可视化和 MQTT 集成。",
-      "items_1_company": "科技公司",
-      "items_1_position": "前端实习生",
-      "items_1_duration": "2022 - 2023",
-      "items_1_description": "参与电商后台系统开发，使用 Vue。"
+
+      "items_0_company": "深圳市力胜源科技有限公司",
+      "items_0_position": "Web 前端开发工程师/物联网工程师",
+      "items_0_duration": "2023.11 - 2026.01",
+      "items_0_description": "参与储能设备管理平台的功能迭代与优化，主要基于 Vue2 进行系统维护与新功能开发。参与部分模块的 Vue3 + TypeScript 升级实践，提升代码结构可维护性。设计并实现设备运行状态可视化看板，日均处理 20万+ 数据点位。完成 MQTT + WebSocket 集成方案，支持 2000+ 设备并发连接。作为技术接口人对接欧洲与澳洲合作方，输出英文技术文档并参与方案沟通。",
+
+      "items_1_company": "TECHM8 Limited（澳大利亚）",
+      "items_1_position": "产品专员",
+      "items_1_duration": "2023.02 - 2023.10",
+      "items_1_description": "英语工作环境下负责海外客户对接与数字化营销运营。通过 A/B 测试与数据分析降低获客成本 25%，提升高净值客户复购率 42%。具备技术与商业结合视角，擅长跨文化沟通与协作。"
     },
+
     "values": {
-      "title": "我的理念",
-      "points": "用户体验优先,组件化与可维护性代码"
+      "title": "核心能力",
+      "points": "性能优化与架构设计,高并发与物联网系统集成,数据可视化实现能力,国际协作与英文技术沟通,以用户体验为核心"
     },
+
     "contact": {
       "title": "联系我",
-      "content": "感兴趣合作或进一步交流？欢迎通过页面底部或 LinkedIn 与我取得联系！"
+      "content": "目前正在寻找前端开发岗位机会（能源 / SaaS / 出海方向优先）。欢迎交流合作。"
     }
   },
   "contactPage": {
@@ -116,7 +137,7 @@
   "homePage": {
     "title": "首页",
     "hero_title": "你好，我是 Annice。\n把想法变成界面。",
-    "hero_subtitle": "前端开发工程师，专注于用 React、Next.js 和 Tailwind CSS 构建现代化、以用户为中心的 Web 应用。",
+    "hero_subtitle": "前端开发工程师，专注于能源与物联网系统的数据可视化与设备管理平台开发。擅长构建高性能、可扩展的 Web 应用，并具备国际项目协作经验。",
     "buttons": {
       "view_work": "查看作品",
       "about_me": "关于我"

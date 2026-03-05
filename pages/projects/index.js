@@ -40,15 +40,17 @@ export default function Projects() {
       github: "https://github.com/AnniceYang/energy-dashboard",
       live: "https://demo-energyvista.vercel.app",
       images: ["/images/energyvista1.png"],
+      status: "WIP",
     },
     {
       id: "travelogue",
       title: t("travelogue.title"),
       description: t("travelogue.description"),
       tech: ["Next.js", "MDX", "Tailwind", "i18n"],
-      github: "https://github.com/AnniceYang/travelogue",
-      live: "https://travelogue.vercel.app",
+      github: null,
+      live: null,
       images: ["/images/travelogue1.png"],
+      status: "PLANNED",
     },
   ];
 
@@ -117,9 +119,23 @@ export default function Projects() {
 
                 {/* 内容 */}
                 <div className="p-6">
-                  <h2 className="text-xl font-semibold text-pink-500 mb-2">
-                    {project.title}
-                  </h2>
+                  <div className="flex items-center gap-2 mb-2">
+                    <h2 className="text-xl font-semibold text-pink-500">
+                      {project.title}
+                    </h2>
+
+                    {project.status === "WIP" && (
+                      <span className="text-xs bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded-full">
+                        WIP
+                      </span>
+                    )}
+
+                    {project.status === "PLANNED" && (
+                      <span className="text-xs bg-gray-200 text-gray-600 px-2 py-0.5 rounded-full">
+                        Planned
+                      </span>
+                    )}
+                  </div>
                   <p className="text-gray-700 text-sm mb-4">
                     {project.description}
                   </p>
@@ -136,23 +152,28 @@ export default function Projects() {
                   </div>
 
                   <div className="flex justify-start space-x-4 text-sm mb-2">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-500 hover:underline font-medium"
-                    >
-                      GitHub
-                    </a>
-                    <a
-                      href={project.live}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-blue-500 hover:text-blue-700 hover:underline transition"
-                    >
-                      <Globe size={16} />
-                      <span>Live Demo</span>
-                    </a>
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-500 hover:underline font-medium"
+                      >
+                        GitHub
+                      </a>
+                    )}
+
+                    {project.live && (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-blue-500 hover:text-blue-700 hover:underline transition"
+                      >
+                        <Globe size={16} />
+                        <span>Live Demo</span>
+                      </a>
+                    )}
                   </div>
 
                   <Link

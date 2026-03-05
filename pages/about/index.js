@@ -73,7 +73,7 @@ export default function About() {
             >
               <div className="absolute inset-0 backface-hidden rounded-full overflow-hidden border-4 border-pink-300 shadow-xl">
                 <Image
-                  src="/cancan.jpg"
+                  src="/cancan1.jpg"
                   alt="avatar"
                   fill
                   className="object-cover"
@@ -117,6 +117,47 @@ export default function About() {
                 {tag}
               </span>
             ))}
+          </div>
+        </motion.section>
+
+        {/* Career Path */}
+        <motion.section {...fadeInUp}>
+          <h2 className="text-2xl font-semibold text-pink-600 mb-4">
+            {t("career.title")}
+          </h2>
+
+          <p className="text-gray-800 leading-relaxed mb-4">{t("career.p1")}</p>
+
+          <p className="text-gray-800 leading-relaxed">{t("career.p2")}</p>
+        </motion.section>
+
+        {/* Current Focus */}
+        <motion.section {...fadeInUp}>
+          <h2 className="text-2xl font-semibold text-pink-600 mb-4">
+            {t("focus.title")}
+          </h2>
+
+          <div className="grid sm:grid-cols-3 gap-4">
+            <div className="bg-white/80 p-4 rounded-lg shadow hover:shadow-md transition">
+              <h3 className="font-semibold text-pink-700 mb-2">
+                {t("focus.item1_title")}
+              </h3>
+              <p className="text-gray-700 text-sm">{t("focus.item1_desc")}</p>
+            </div>
+
+            <div className="bg-white/80 p-4 rounded-lg shadow hover:shadow-md transition">
+              <h3 className="font-semibold text-pink-700 mb-2">
+                {t("focus.item2_title")}
+              </h3>
+              <p className="text-gray-700 text-sm">{t("focus.item2_desc")}</p>
+            </div>
+
+            <div className="bg-white/80 p-4 rounded-lg shadow hover:shadow-md transition">
+              <h3 className="font-semibold text-pink-700 mb-2">
+                {t("focus.item3_title")}
+              </h3>
+              <p className="text-gray-700 text-sm">{t("focus.item3_desc")}</p>
+            </div>
           </div>
         </motion.section>
 
@@ -221,9 +262,6 @@ export default function About() {
     </div>
   );
 }
-
-// 渐变边框类，可在 global.css 中定义
-// .border-gradient-pink { border-image: linear-gradient(to bottom, #ec4899, #a78bfa) 1; }
 
 export async function getStaticProps({ locale }) {
   return {

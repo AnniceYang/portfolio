@@ -4,8 +4,16 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import Starfield from "@/components/Starfield";
 import { ChevronDown } from "lucide-react";
-import { FaReact, FaNodeJs, FaCss3Alt } from "react-icons/fa";
-import { SiNextdotjs, SiMqtt } from "react-icons/si";
+import { FaReact, FaVuejs, FaNodeJs, FaGitAlt } from "react-icons/fa";
+import {
+  SiNextdotjs,
+  SiTailwindcss,
+  SiTypescript,
+  SiJavascript,
+  SiMqtt,
+  SiSocketdotio,
+  SiApacheecharts,
+} from "react-icons/si";
 
 export default function HomePage() {
   const t = useTranslations("homePage");
@@ -15,10 +23,29 @@ export default function HomePage() {
     { name: "React", icon: <FaReact className="text-sky-400 w-6 h-6" /> },
     { name: "Next.js", icon: <SiNextdotjs className="w-6 h-6 text-black" /> },
     {
-      name: "Tailwind CSS",
-      icon: <FaCss3Alt className="text-blue-500 w-6 h-6" />,
+      name: "TypeScript",
+      icon: <SiTypescript className="w-6 h-6 text-blue-500" />,
     },
+    {
+      name: "JavaScript",
+      icon: <SiJavascript className="w-6 h-6 text-yellow-400" />,
+    },
+    { name: "Vue.js", icon: <FaVuejs className="w-6 h-6 text-green-500" /> },
+    {
+      name: "Tailwind CSS",
+      icon: <SiTailwindcss className="w-6 h-6 text-cyan-400" />,
+    },
+    { name: "Node.js", icon: <FaNodeJs className="w-6 h-6 text-green-600" /> },
     { name: "MQTT", icon: <SiMqtt className="w-6 h-6 text-orange-500" /> },
+    {
+      name: "WebSocket",
+      icon: <SiSocketdotio className="w-6 h-6 text-gray-700" />,
+    },
+    {
+      name: "ECharts",
+      icon: <SiApacheecharts className="w-6 h-6 text-red-500" />,
+    },
+    { name: "Git", icon: <FaGitAlt className="w-6 h-6 text-orange-600" /> },
   ];
 
   // 最近项目
@@ -93,9 +120,17 @@ export default function HomePage() {
           >
             {t("hero_subtitle")}
           </motion.p>
+          <motion.p
+            className="mt-4 text-pink-200 text-sm tracking-wide"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4 }}
+          >
+            Frontend Developer · React · Vue · IoT Platforms
+          </motion.p>
           {/* CTA 按钮 */}
           <motion.div
-            className="mt-10 flex gap-6"
+            className="mt-10 flex flex-wrap justify-center gap-6"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
@@ -106,29 +141,51 @@ export default function HomePage() {
             >
               {t("buttons.view_work")}
             </Link>
+
             <Link
               href="/about"
               className="px-6 py-3 border border-white/70 text-white/90 hover:bg-white/10 rounded-full font-semibold shadow transition hover:shadow-[0_0_20px_rgba(255,182,193,0.5)] hover:scale-105"
             >
               {t("buttons.about_me")}
             </Link>
-          </motion.div>
-          {/* 技术栈区域 */}
 
-          <div
-            className="flex gap-4 mt-16 max-w-full overflow-x-auto no-scrollbar px-2"
-            aria-label="Tech stack"
-          >
-            {techStack.map(({ name, icon }) => (
-              <div
-                key={name}
-                className="flex flex-shrink-0 items-center gap-2 px-5 py-2 min-w-max bg-white/10 rounded-lg border border-pink-200/30 text-white/90 backdrop-blur-sm hover:bg-white/20 hover:shadow-[0_0_15px_rgba(255,182,193,0.5)] transition cursor-default select-none"
-                title={name}
-              >
-                <span className="flex-shrink-0">{icon}</span>
-                <span className="font-medium whitespace-nowrap">{name}</span>
-              </div>
-            ))}
+            <Link
+              href="https://github.com/AnniceYang"
+              target="_blank"
+              className="px-6 py-3 border border-white/70 text-white/90 hover:bg-white/10 rounded-full font-semibold shadow transition hover:shadow-[0_0_20px_rgba(255,182,193,0.5)] hover:scale-105"
+            >
+              GitHub
+            </Link>
+
+            <Link
+              href="/Annice_resume.pdf"
+              className="px-6 py-3 border border-white/70 text-white/90 hover:bg-white/10 rounded-full font-semibold shadow transition hover:shadow-[0_0_20px_rgba(255,182,193,0.5)] hover:scale-105"
+            >
+              Resume
+            </Link>
+          </motion.div>
+
+          {/* 技术栈区域 */}
+          <div className="mt-16 w-full max-w-4xl">
+            <h2 className="text-white/80 text-sm tracking-widest uppercase mb-4">
+              Core Technologies
+            </h2>
+
+            <div
+              className="flex flex-wrap justify-center gap-4"
+              aria-label="Tech stack"
+            >
+              {techStack.map(({ name, icon }) => (
+                <div
+                  key={name}
+                  className="flex items-center gap-2 px-4 py-2 text-sm bg-white/10 rounded-lg border border-pink-200/30 text-white/90 backdrop-blur-sm hover:bg-white/20 hover:shadow-[0_0_15px_rgba(255,182,193,0.5)] transition"
+                  title={name}
+                >
+                  <span className="flex-shrink-0">{icon}</span>
+                  <span className="font-medium whitespace-nowrap">{name}</span>
+                </div>
+              ))}
+            </div>
           </div>
           {/* 滚动提示箭头 */}
           <motion.div
@@ -147,11 +204,11 @@ export default function HomePage() {
             <h2 className="text-3xl font-bold text-gray-800 mb-8 text-center">
               {t("recent_projects")}
             </h2>
-            <div className="grid gap-6 md:grid-cols-3">
+            <div className="grid gap-8 md:grid-cols-3">
               {recentProjects.map((proj, i) => (
                 <motion.div
                   key={i}
-                  className="p-6 rounded-xl bg-white shadow hover:shadow-xl border border-transparent hover:border-pink-300 transition cursor-pointer"
+                  className="p-6 rounded-xl bg-white shadow-md hover:shadow-2xl border border-gray-100 hover:border-pink-300 transition cursor-pointer"
                   whileHover={{ scale: 1.05, y: -4 }}
                   tabIndex={0}
                   role="link"
@@ -160,10 +217,10 @@ export default function HomePage() {
                     if (e.key === "Enter") window.location.href = proj.href;
                   }}
                 >
-                  <h3 className="font-semibold text-xl text-gray-800">
+                  <h3 className="font-semibold text-xl text-gray-800 mb-2">
                     {proj.title}
                   </h3>
-                  <p className="text-gray-600 mt-2">{proj.description}</p>
+                  <p className="text-gray-600 text-sm">{proj.description}</p>
                   <Link
                     href={proj.href}
                     className="mt-4 inline-block text-pink-600 hover:underline"
