@@ -5,7 +5,7 @@ import Head from "next/head";
 import { useTranslations, useLocale } from "next-intl";
 import { useState, useEffect } from "react";
 import { Globe } from "lucide-react";
-import { projects } from "./data/projects";
+import { projects } from "../../data/projects";
 
 export default function ProjectDetail() {
   const router = useRouter();

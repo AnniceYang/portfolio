@@ -4,7 +4,7 @@ import Link from "next/link";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import { Globe } from "lucide-react";
-import { projects } from "./data/projects";
+import { projects } from "../../data/projects";
 
 export default function Projects() {
   const t = useTranslations("projects");
