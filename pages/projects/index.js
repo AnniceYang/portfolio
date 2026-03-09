@@ -4,55 +4,17 @@ import Link from "next/link";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import { Globe } from "lucide-react";
+import { projects } from "./data/projects";
 
 export default function Projects() {
   const t = useTranslations("projects");
   const [currentIndex, setCurrentIndex] = useState({});
 
-  const projectList = [
-    {
-      id: "projects",
-      title: t("portfolio.title"),
-      description: t("portfolio.description"),
-      tech: ["React", "Next.js", "Tailwind", "i18n"],
-      github: "https://github.com/AnniceYang/portfolio",
-      live: "https://annice-portfolio.vercel.app/",
-      images: ["/images/portfolio1.png", "/images/portfolio2.png"],
-    },
-    {
-      id: "cashier-pos",
-      title: t("cashier-pos.title"),
-      description: t("cashier-pos.description"),
-      tech: ["Vite", "Vue 3", "Element PLUS", "Pinia", "REST API", "i18n"],
-      github: "https://github.com/AnniceYang/cashierly-pos",
-      live: "https://cashierly-pos.vercel.app/login",
-      images: [
-        "/images/cashierly1.png",
-        "/images/cashierly2.png",
-        "/images/cashierly3.png",
-      ],
-    },
-    {
-      id: "energyvista",
-      title: t("energyvista.title"),
-      description: t("energyvista.description"),
-      tech: ["Vue 2", "Echarts", "MQTT", "i18n"],
-      github: "https://github.com/AnniceYang/energy-dashboard",
-      live: "https://demo-energyvista.vercel.app",
-      images: ["/images/energyvista1.png"],
-      status: "WIP",
-    },
-    {
-      id: "travelogue",
-      title: t("travelogue.title"),
-      description: t("travelogue.description"),
-      tech: ["Next.js", "MDX", "Tailwind", "i18n"],
-      github: null,
-      live: null,
-      images: ["/images/travelogue1.png"],
-      status: "PLANNED",
-    },
-  ];
+  const projectList = projects.map((p) => ({
+    ...p,
+    title: t(`${p.id}.title`),
+    description: t(`${p.id}.description`),
+  }));
 
   // ✅ 自动轮播效果
   useEffect(() => {

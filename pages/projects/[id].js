@@ -5,34 +5,14 @@ import Head from "next/head";
 import { useTranslations, useLocale } from "next-intl";
 import { useState, useEffect } from "react";
 import { Globe } from "lucide-react";
-
-const projectsData = {
-  "cashier-pos": {
-    id: "cashier-pos",
-    images: [
-      "/images/cashierly1.png",
-      "/images/cashierly2.png",
-      "/images/cashierly3.png",
-    ],
-    tech: ["Vue 3", "Vite", "Element Plus", "Pinia", "REST API", "i18n"],
-    github: "https://github.com/AnniceYang/cashierly-pos",
-    live: "https://cashierly-pos.vercel.app/login",
-  },
-  projects: {
-    id: "projects",
-    images: ["/images/portfolio1.png", "/images/portfolio2.png"],
-    tech: ["Next.js", "React", "Tailwind CSS", "Framer Motion", "i18n"],
-    github: "https://github.com/AnniceYang/portfolio",
-    live: "https://annice-portfolio.vercel.app/",
-  },
-};
+import { projects } from "./data/projects";
 
 export default function ProjectDetail() {
   const router = useRouter();
   const locale = useLocale();
   const t = useTranslations("projectDetails");
   const { id } = router.query;
-  const project = projectsData[id];
+  const project = projects.find((p) => p.id === id);
 
   const [lightbox, setLightbox] = useState(null);
 
@@ -58,6 +38,8 @@ export default function ProjectDetail() {
       <Head>
         <title>{title} | Annice Portfolio</title>
         <meta name="description" content={description} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
       </Head>
 
       <div className="min-h-screen px-4 md:px-6 py-10 max-w-5xl mx-auto">
@@ -150,22 +132,27 @@ export default function ProjectDetail() {
         </section>
 
         <div className="flex flex-col sm:flex-row gap-4 text-sm mt-10">
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-center sm:text-left bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-2 px-4 rounded-lg transition"
-          >
-            GitHub →
-          </a>
-          <a
-            href={project.live}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-center sm:text-left bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-4 rounded-lg transition"
-          >
-            Live Demo →
-          </a>
+          {project.github && (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-center sm:text-left bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold py-2 px-4 rounded-lg transition"
+            >
+              🐙 GitHub Repo
+            </a>
+          )}
+
+          {project.live && (
+            <a
+              href={project.live}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-center sm:text-left bg-pink-500 hover:bg-pink-600 text-white font-semibold py-2 px-4 rounded-lg transition"
+            >
+              Live Demo →
+            </a>
+          )}
         </div>
 
         <div className="mt-16 text-center">
@@ -197,11 +184,17 @@ export default function ProjectDetail() {
 }
 
 export async function getStaticPaths({ locales }) {
-  const ids = ["projects", "cashier-pos"];
   const paths = [];
-  locales.forEach((locale) =>
-    ids.forEach((id) => paths.push({ params: { id }, locale }))
-  );
+
+  projects.forEach((p) => {
+    locales.forEach((locale) => {
+      paths.push({
+        params: { id: p.id },
+        locale,
+      });
+    });
+  });
+
   return { paths, fallback: false };
 }
 
