@@ -12,6 +12,11 @@ export default function ProjectDetail() {
   const locale = useLocale();
   const t = useTranslations("projectDetails");
   const { id } = router.query;
+
+  if (!router.isReady) {
+    return null;
+  }
+
   const project = projects.find((p) => p.id === id);
 
   const [lightbox, setLightbox] = useState(null);
@@ -25,10 +30,17 @@ export default function ProjectDetail() {
     return () => window.removeEventListener("keydown", closeOnEsc);
   }, []);
 
-  if (!project)
+  if (!project) {
     return (
-      <p className="text-center py-20 text-gray-500">Project not found.</p>
+      <div className="text-center py-20">
+        <p className="text-gray-500 mb-4">Project not found.</p>
+
+        <Link href="/projects" className="text-pink-600 hover:underline">
+          ← Back to Projects
+        </Link>
+      </div>
     );
+  }
 
   const title = t(`${id}.title`);
   const description = t(`${id}.description`);

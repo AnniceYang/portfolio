@@ -48,7 +48,7 @@
       "reflection": "这个项目让我更深入理解了 Vue 组件复用和状态管理的架构设计，也提升了我对用户体验细节的把控能力。"
     },
 
-    "projects": {
+    "portfolio": {
       "title": "个人作品集网站",
       "description": "使用 Next.js 与 Tailwind CSS 构建的个人作品集网站，用于展示项目与技能，支持多语言访问。",
       "highlights": [

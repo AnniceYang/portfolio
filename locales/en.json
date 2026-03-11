@@ -47,7 +47,7 @@
       "reflection": "This project helped me refine my understanding of scalable component design and improved my state management workflow in Vue 3."
     },
 
-    "projects": {
+    "portfolio": {
       "title": "Personal Portfolio Website",
       "description": "A personal portfolio website showcasing projects and skills, built with Next.js and Tailwind CSS with multilingual support.",
       "highlights": [
